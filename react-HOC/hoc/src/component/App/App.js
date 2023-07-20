@@ -1,10 +1,13 @@
-import logo from './logo.svg';
+import Button from '../Button/Button';
 import './App.css';
 
 function App() {
   return (
-    <>
-    </>
+
+    <div className="App">
+      <Button />
+    </div>
+
   );
 }
 

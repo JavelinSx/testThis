@@ -13,6 +13,8 @@ code {
 $background-color: #6daae8;
 
 @import '../src/components/App/App.scss';
-@import '../src/components/bootstrap/Button/Button.scss';
 @import '../src/components/Menu/Menu.scss';
 @import '../src/components/Board/Board.scss';
+@import '../src/components/BoardCells/BoardCells.scss';
+@import '../src/components/Cells/Cells.scss';
+@import '../src/components/Cell/Cell.scss';

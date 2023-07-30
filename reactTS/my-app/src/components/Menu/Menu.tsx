@@ -1,5 +1,5 @@
 import React from 'react';
-import Button from '../bootstrap/Button/Button';
+import Button from '../../bootstrap/Button/Button';
 import { useAppDispatch } from '../../hooks/hooks';
 import { start, end } from '../../store/slices/game';
 

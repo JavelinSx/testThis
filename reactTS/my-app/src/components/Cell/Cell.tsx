@@ -1,4 +1,5 @@
 import React from 'react';
+
 interface CellProps {
   id: number;
   onClick: (id: number) => void;

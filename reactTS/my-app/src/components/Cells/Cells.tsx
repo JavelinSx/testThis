@@ -1,7 +1,11 @@
 import React from 'react';
 import Cell from '../Cell/Cell';
 
-const Cells: React.FC = () => {
+interface CellsProps {
+  classPlayerCells: string;
+}
+
+const Cells: React.FC<CellsProps> = ({ classPlayerCells }) => {
   const rows = 10;
   const columns = 10;
   const grid = [];
@@ -18,7 +22,7 @@ const Cells: React.FC = () => {
     }
   }
 
-  return <div className='cells'>{grid}</div>;
+  return <div className={classPlayerCells}>{grid}</div>;
 };
 
 export default Cells;

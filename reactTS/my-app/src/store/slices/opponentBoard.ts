@@ -1,11 +1,19 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import type { RootState } from '../../store/store';
+import { BoardState, Ship, Cell } from '../../types/types';
 
-interface OpponentCellState {
-  isHit: boolean;
-  isMiss: boolean;
-}
+const initialState: BoardState = {
+  cells: [],
+  ships: [],
+  boardHits: [],
+};
 
-interface opponentBoardState {
-  board: OpponentCellState[][];
-}
+const opponentBoardSlice = createSlice({
+  name: 'plauerBoard',
+  initialState,
+  reducers: {
+    handleBoardHit: (state, action: PayloadAction<Cell>) => {
+      const { x, y } = action.payload;
+      state.boardHits[y][x] = true; // Устанавливаем флаг попадания на доске по соответствующей клетке
+    },
+  },
+});

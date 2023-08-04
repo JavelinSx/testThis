@@ -1,10 +1,12 @@
 import React from 'react';
-import Cells from '../Cells/Cells';
+import CellsOpponent from '../CellsOpponent/CellsOpponent';
+import CellsPlayer from '../CellsPlayer/CellsPlayer';
 
 const BoardCells: React.FC = () => {
   return (
     <div className='board-cells'>
-      <Cells></Cells>
+      <CellsPlayer />
+      <CellsOpponent />
     </div>
   );
 };
